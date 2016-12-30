@@ -1,0 +1,125 @@
+.lightbox {
+    background-color: rgba(0, 0, 0, .9);
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    top: 0;
+}
+
+.lightbox .lightbox-imagem {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 6;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.current {
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+@media screen and (min-width: 1000px) {
+    .lightbox .lightbox-imagem {
+        height: 80%;
+        width: auto;
+    }
+}
+
+.close-lightbox {
+    position: absolute;
+    padding: .6rem;
+    height: 2rem;
+    top: 1rem;
+    right: 4vw;
+    z-index: 8;
+    background-color: rgba(0, 0, 0, .4);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.close-lightbox .linha1,
+.close-lightbox .linha2 {
+    width: 2.2rem;
+    height: 2px;
+    background-color: rgb(180, 177, 177);
+}
+
+.close-lightbox .linha1 {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.close-lightbox .linha2 {
+    margin-top: -2px;
+    -webkit-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+
+.prev,
+.next {
+    position: absolute;
+    padding: .6rem;
+    top: 48vh;
+    width: 2rem;
+    height: 2rem;
+    z-index: 8;
+    background-color: rgba(0, 0, 0, .4);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.prev {
+    left: 4vw
+}
+
+.next {
+    right: 4vw
+}
+
+.prev1,
+.prev2,
+.next1,
+.next2 {
+    width: 1.1rem;
+    height: 2px;
+    background-color: rgb(180, 177, 177);
+    z-index: 9;
+}
+
+.prev1,
+.next2 {
+    -webkit-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+
+.prev2 {
+    margin-top: .6rem;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.next1 {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.next2 {
+    margin-top: .6rem;
+    -webkit-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
